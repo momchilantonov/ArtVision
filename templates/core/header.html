@@ -1,0 +1,11 @@
+{% load static %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="{% static 'css/lux_style.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/custom_style.css' %}" rel="stylesheet">
+{% block styles %}
+{% endblock %}
+<title>
+    {% block title %}
+    {% endblock %}
+</title>
