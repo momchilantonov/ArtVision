@@ -1,10 +1,13 @@
-from art_vision.gallery.models import Album
+from art_vision.core.views import get_obj_by_id
+from art_vision.gallery.models import Album, Image
 from django.shortcuts import render
 
-# Create your views here.
-def show_albums(req):
-    albums = Album.objects.all()
+
+def get_album(req, pk):
+    album = get_obj_by_id(Album, pk)
+    images = Image.objects.filter(album=album)
     context = {
-        'albums': albums,
+        'album': album,
+        'images': images,
     }
-    return render(req, 'body.html', context)
+    return render(req, 'gallery/show_album.html', context)
