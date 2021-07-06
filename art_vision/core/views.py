@@ -15,11 +15,5 @@ def get_first_obj(obj):
 
 
 def home_page(req):
-    albums = get_all_objs(Album)
-    # procedures = get_all_objs(Procedure)
-    context = {
-        'albums': albums,
-        # 'procedures': procedures,
-    }
-    return render(req, 'core/home_page.html', context)
+    return render(req, 'core/home_page.html')
 

@@ -1,4 +1,7 @@
 {% extends 'core/base.html' %}
+{% block content %}
 {% for image in images %}
-    {{ image.title }}
+    <h5>{{ image.title }}</h5>
+    <img src="{{ image.url }}" alt="img">
 {% endfor %}
+{% endblock %}
