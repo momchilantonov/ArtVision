@@ -21,3 +21,16 @@ body {
     background-attachment:fixed;
     
 }
+.card {
+    margin-top: 10px;
+    margin-left: 20px;
+    border-width: 2px;
+    float:left
+}
+.card-header {
+    text-align: center;
+}
+.card-img {
+    width: 284px;
+    height: 240px;
+}

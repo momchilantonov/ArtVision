@@ -3,9 +3,9 @@ from art_vision.gallery.models import Album, Image
 from django.shortcuts import render
 
 
-def get_album(req, pk):
+def show_album(req, pk):
     album = get_obj_by_id(Album, pk)
-    images = Image.objects.filter(album=album)
+    images = album.image_set.all()
     context = {
         'album': album,
         'images': images,

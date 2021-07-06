@@ -1,7 +1,11 @@
 {% extends 'core/base.html' %}
 {% block content %}
-{% for image in images %}
-    <h5>{{ image.title }}</h5>
-    <img src="{{ image.url }}" alt="img">
-{% endfor %}
+    {% for image in images %}
+    <div class="card border-danger mb-3" style="max-width: 20rem;">
+        <div class="card-header">{{ image.title }}</div>
+        <div class="card-body">
+            <img class="card-img" src="{{ image.image.url }}" alt="img">
+        </div>
+    </div>
+    {% endfor %}
 {% endblock %}
