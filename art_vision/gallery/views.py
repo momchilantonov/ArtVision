@@ -9,5 +9,6 @@ def show_album(req, pk):
     context = {
         'album': album,
         'images': images,
+        
     }
     return render(req, 'gallery/show_album.html', context)

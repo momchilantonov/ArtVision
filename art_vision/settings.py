@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'art_vision.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'art_vision_db',
+        'NAME': 'artvision',
         'USER': 'antonov',
         'PASSWORD': 'antonov8501',
         'HOST': '127.0.0.1',

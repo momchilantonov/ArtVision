@@ -14,7 +14,9 @@
         {% endblock %}
     </title>
   </head>
-  <body>
+    {% block background %}
+  <body class="body-homepage">
+    {% endblock %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
           <img class="navbar-img" src="{% static 'imgs/navbar_img.jpg' %}" alt="navbar img">
