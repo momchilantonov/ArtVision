@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'art_vision.core',
     'art_vision.gallery',
+    'art_vision.procedures',
 ]
 
 MIDDLEWARE = [

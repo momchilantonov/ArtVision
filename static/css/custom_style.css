@@ -15,23 +15,16 @@ footer {
     margin-right: 15px;
 }
 .body-homepage {
-    background-image: url('/static/imgs/background_img.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment:fixed;
-    
-}
-.body-gallery {
-    background-image: url('/static/imgs/background_img2.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment:fixed;
+    width: auto;
+    height: auto;        
+    background: url('/static/imgs/background_img.jpg') no-repeat;
+    background-size: cover;
 }
 .card {
     margin-top: 16px;
-    margin-right: 20px;
+    margin-left: 20px;
     border-width: 2px;
-    float: right
+    float:left
 }
 .card-header {
     text-align: center;
@@ -41,9 +34,9 @@ footer {
     height: 240px;
 }
 .album-title {
-    margin-top: 16px;
-    margin-bottom: 0px;
-    margin-right: 20px;
-    text-align: right;
-    color:snow;
+    margin: 20px;
+}
+.gallery {
+    margin-left: 137px;
+
 }
