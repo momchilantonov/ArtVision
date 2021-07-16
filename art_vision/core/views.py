@@ -16,4 +16,3 @@ def get_first_obj(obj):
 
 def home_page(req):
     return render(req, 'core/home_page.html')
-

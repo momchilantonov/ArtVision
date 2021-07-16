@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'art_vision.art_vision_auth',
     'art_vision.core',
     'art_vision.gallery',
     'art_vision.procedures',
