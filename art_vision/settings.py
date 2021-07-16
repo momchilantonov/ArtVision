@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'art_vision.art_vision_auth',
+    'art_vision.profiles',
     'art_vision.core',
     'art_vision.gallery',
     'art_vision.procedures',
@@ -82,7 +83,7 @@ WSGI_APPLICATION = 'art_vision.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'artvision',
+        'NAME': 'test_db',
         'USER': 'antonov',
         'PASSWORD': 'antonov8501',
         'HOST': '127.0.0.1',
@@ -146,3 +147,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Login URL
 
 LOGIN_URL = reverse_lazy('sign in')
+
+# ...
+
+AUTH_USER_MODEL = 'art_vision_auth.ArtVisionUser'

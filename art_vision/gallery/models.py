@@ -14,7 +14,7 @@ class Album(models.Model):
 class Image(models.Model):
     title = models.CharField(max_length=20)
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='images/%Y/%m/%d')
+    image = models.ImageField(upload_to='gallert/%Y/%m/%d')
 
     def __str__(self):
         return self.title

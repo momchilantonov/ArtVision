@@ -1,17 +1,16 @@
-from art_vision.art_vision_auth.forms import SignInForm
+from art_vision.art_vision_auth.forms import SignInForm, SignUpForm
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import UserCreationForm
 
 
 def sign_up(req):
     if req.POST:
-        form = UserCreationForm(req.POST)
+        form = SignUpForm(req.POST)
         if form.is_valid():
             form.save()
             return redirect('sign in')
     else:
-        form = UserCreationForm()
+        form = SignUpForm()
     context = {
         'form': form,
     }

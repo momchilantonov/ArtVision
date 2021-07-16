@@ -12,16 +12,15 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Procedure',
+            name='ArtVisionUser',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=30)),
-                ('description', models.TextField()),
-                ('image', models.ImageField(upload_to='images/%Y/%m/%d')),
-                ('price', models.DecimalField(decimal_places=2, max_digits=4)),
+                ('password', models.CharField(max_length=128, verbose_name='password')),
+                ('last_login', models.DateTimeField(blank=True, null=True, verbose_name='last login')),
+                ('email', models.EmailField(max_length=254, unique=True)),
             ],
             options={
-                'verbose_name_plural': 'procedures',
+                'abstract': False,
             },
         ),
     ]
