@@ -1,9 +1,9 @@
-from django import template
+from django.template import Library
 from art_vision.gallery.models import Album
 from art_vision.core.views import get_all_objs
 
 
-register = template.Library()
+register = Library()
 
 
 @register.inclusion_tag('core/albums_dropdown.html')
