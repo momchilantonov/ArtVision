@@ -1,6 +1,6 @@
+from django import template
 from art_vision.gallery.models import Album
 from art_vision.core.views import get_all_objs
-from django import template
 
 
 register = template.Library()
@@ -8,9 +8,10 @@ register = template.Library()
 
 @register.inclusion_tag('core/albums_dropdown.html')
 def show_albums_dropdown():
-    return {'albums': get_all_objs(Album)}
-        
-    
+    albums = get_all_objs(Album)
+    return {
+        'albums': albums,
+    }
 
 
 # @register.inclusion_tag('core/procedures_dropdown.html')

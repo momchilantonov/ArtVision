@@ -1,5 +1,6 @@
 {% load static %}
 {% load navbar %}
+{% load profile_status %}
 <!doctype html>
 <html lang="en">
     <head>
@@ -53,9 +54,10 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
+                    {% profile_status %}
                     {% if request.user.is_authenticated %}
                         <li class="nav-item">
-                            <p>Hello, {{ request.user }}</p>
+                            <a class="nav-link" href="{% url 'profile details' %}">Welcome, {{ request.user }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'sign out' %}">Sign out</a>

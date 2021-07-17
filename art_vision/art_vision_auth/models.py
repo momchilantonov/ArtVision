@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import PermissionsMixin
 
 
 class ArtVisonUserManager(BaseUserManager):
@@ -29,7 +30,7 @@ class ArtVisonUserManager(BaseUserManager):
         return self._create_user(email, password, **extra_fields)
 
 
-class ArtVisionUser(AbstractBaseUser):
+class ArtVisionUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
