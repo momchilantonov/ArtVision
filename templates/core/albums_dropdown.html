@@ -1,7 +1,0 @@
-{% if albums %}
-    {% for album in albums %}
-        <a class="dropdown-item" href="{% url 'get album' album.id %} ">{{ album.title }}</a>
-    {% endfor %}
-{% else %}
-    <a class="dropdown-item" href="#">No Albums</a>
-{% endif %}

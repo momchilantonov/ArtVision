@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ProceduresConfig(AppConfig):
+class CoreConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'art_vision.procedures'
+    name = 'core'
