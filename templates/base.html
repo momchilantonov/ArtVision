@@ -1,0 +1,123 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ArtVision</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:300,400,500,600,700|Josefin+Sans:300,400,600,700|Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.bxslider.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container"> <a class="navbar-brand logo" href="#"><img src="{% static 'img/art_logo_black.png' %}" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="lni-menu"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Team</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Services</a>
+                        <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Skin</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Hair</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">MakeUp</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Wellness</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Location</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <a href="#" class="btn btn-sm btn-dark ml-3">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <!---------------Navigation ends here --------------------->
+
+    <div class="bg-wrapper py-3 dd3">
+        <div class="container">
+            <div class="row py-3">
+                <div class="col-md-3 col-sm-6 d-flex align-items-center">
+                    <div class="footer-logo-wrapper">
+                        <div class="footer-logo"> <a href="#"><img src="{% static 'img/art_logo_white.png' %}" alt=""></a>
+                        </div>
+                        <div class="footer-copyright">
+                            <p>Hair Salon was founded by wife and husband Kevin and Jenifer in 20011. They wanted a
+                                friendly “no attitude” retreat for London.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="#">Skin</a></li>
+                            <li><a href="#">Hair</a></li>
+                            <li><a href="#/">Nails</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-contact">
+                        <ul>
+                            <li> <a href="tel:(804) 614-4556"> Phone: +359 888 888 888 </a> </li>
+                            <li> 1000, Alexander Malinov 25 str., Sofia</li>
+                            <li><a href="mailto:homedesign@gmail.com">Email: artvision@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <ul class="social-list">
+                        <li> <a href="#"><i class="lni-facebook-filled"></i></a> </li>
+                        <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
+                        <li><a href="#"><i class="lni-pinterest"></i></a></li>
+                        <li><a href="#"><i class="lni-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------Footer section ends here --------------------->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').bxSlider({
+                minSlides: 1,
+                maxSlides: 10,
+                captions: true,
+                slideWidth: 400
+            });
+        });
+    </script>
+</body>
+
+</html>
